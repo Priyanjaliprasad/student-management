@@ -5,7 +5,7 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
 
   const fetchStudents = async () => {
-    const res = await fetch('https://student-management-w6c4.onrender.com');
+    const res = await fetch('http://localhost:5000.com');
     const data = await res.json();
     setStudents(data);
   };
@@ -16,7 +16,7 @@ const StudentList = () => {
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this student?')) {
-      await fetch(`https://student-management-w6c4.onrender.com/${id}`, {
+      await fetch(`http://localhost:5000/${id}`, {
         method: 'DELETE',
       });
       alert('Student deleted!');
