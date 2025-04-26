@@ -18,7 +18,7 @@ const EditStudent = () => {
 
   useEffect(() => {
     const fetchStudent = async () => {
-      const res = await fetch(`http://localhost:5000/api/students/${id}`);
+      const res = await fetch(`https://student-management-w6c4.onrender.com/${id}`);
       const data = await res.json();
       setStudent(data);
     };
@@ -36,7 +36,7 @@ const EditStudent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`http://localhost:5000/api/students/${id}`, {
+    const res = await fetch(`https://student-management-w6c4.onrender.com/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(student),
