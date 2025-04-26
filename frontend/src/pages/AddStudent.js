@@ -26,7 +26,7 @@ const AddStudent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('https://student-management-w6c4.onrender.com', {
+    const res = await fetch('http://localhost:5000', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(student),
