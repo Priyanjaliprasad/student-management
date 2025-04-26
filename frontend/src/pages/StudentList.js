@@ -5,7 +5,7 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
 
   const fetchStudents = async () => {
-    const res = await fetch('http://localhost:5000/api/students');
+    const res = await fetch('https://student-management-w6c4.onrender.com');
     const data = await res.json();
     setStudents(data);
   };
